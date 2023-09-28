@@ -28,7 +28,7 @@
                         <tr>
                             <td>{{$contacto->id}}</td>
                             <td  class="border px-14 py-1">
-                                <img src="/imagen/{{$contacto->imagen}}" width="40%">
+                                <img src="/imagen/{{$contacto->imagen}}" width="70" height="70" style="border-radius: 50%">
                             </td>
                             <td>{{$contacto->nombre}}</td>
                             <td>{{$contacto->telefono}}</td>

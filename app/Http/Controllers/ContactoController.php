@@ -30,6 +30,18 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
+        $campos=[
+            'nombre'=>'required|string|max:100',
+            'telefono'=>'required|string|max:100',
+            'direccion'=>'required|string|max:200'
+        ];
+
+        $mensaje=[
+            'required'=>'El :attribute es requerido',
+            'image.required'=>'La imagen es requerida'
+        ];
+
+        $this->validate($request, $campos, $mensaje);
 
         $contactos=new Contacto;
         $contactos->nombre=$request->input('nombre');
